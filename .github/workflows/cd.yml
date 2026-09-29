@@ -27,8 +27,8 @@ jobs:
         run: |
           docker compose \
           -f infra/docker-compose.yaml \
-          pull frontend
+          pull app-frontend
 
           docker compose \
           -f infra/docker-compose.yaml \
-          up -d frontend
+          up -d app-frontend
