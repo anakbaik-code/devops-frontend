@@ -63,10 +63,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-      - name: Trigger Infra Deployment
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.INFRA_DEPLOY_TOKEN }}
-          repository: anakbaik-code/devops-infra
-          event-type: deploy
