@@ -68,5 +68,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.INFRA_DEPLOY_TOKEN }}
-          repository: alive38/devops-infra
+          repository: anakbaik-code/devops-infra
           event-type: deploy
