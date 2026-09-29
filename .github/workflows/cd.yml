@@ -16,7 +16,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-
       - name: Checkout Infra
         uses: actions/checkout@v4
         with:
@@ -26,9 +25,5 @@ jobs:
       - name: Deploy Frontend
         run: |
           docker compose \
-          -f infra/docker-compose.yaml \
-          pull app-frontend
-
-          docker compose \
-          -f infra/docker-compose.yaml \
-          up -d app-frontend
+            -f infra/docker-compose.yaml \
+            up -d --pull always app-frontend
